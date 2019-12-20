@@ -12,7 +12,7 @@ countyGeo <- function(locs) {
     # Encode address for API call
     address_encode <- URLencode(address, reserved = TRUE, repeated = TRUE)
     # Build URL for geocode
-    url <- paste0("http://gisdata.alleghenycounty.us/arcgis/rest/services/Geocoders/Composite/GeocodeServer/findAddressCandidates?Street=&City=&State=&ZIP=&SingleLine=", address_encode, '&category=&outFields=&maxLocations=&outSR=4326&searchExtent=&location=&distance=&magicKey=&f=pjson')
+    url <- paste0("http://gisdata.alleghenycounty.us/arcgis/rest/services/Geocoders/Composite/GeocodeServer/findAddressCandidates?SingleLine=", address_encode, '&outSR=4326&f=pjson')
     # Print message for user
     message(paste("Source :", url))
     # Send geet request
