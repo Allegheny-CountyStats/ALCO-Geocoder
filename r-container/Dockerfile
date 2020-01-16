@@ -1,7 +1,7 @@
-FROM countystats/r-geo:1.0
-ARG table
-ARG column
+FROM countystats/r-basic:1.0
 
 MAINTAINER Geoffrey Arnold "geoffrey.arnold@alleghenycounty.us"
 
-RUN Rscript warehouse_geocode.R $table $column
+COPY .env .env
+
+COPY warehouse_geocode.R warehouse_geocode.R

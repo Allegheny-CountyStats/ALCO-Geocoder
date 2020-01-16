@@ -23,21 +23,21 @@ countyGeo <- function(locs) {
     # Check status code & number of candidates
     if (r$status_code == 200 & length(jsonlite::fromJSON(httr::content(r))$candidates) > 0) {
       # Successful add top candidate
-      lon <- c$candidates$location[1,1]
-      lat <- c$candidates$location[1,2]
+      longitude <- c$candidates$location[1,1]
+      latitude <- c$candidates$location[1,2]
     } else if (r$status_code == 200) {
       # Error if not address candidates
       message("    Failed with error (200): No address candidates")
-      lon <- NA
-      lat <- NA
+      longitude <- NA
+      latitude <- NA
     } else {
       # Print other error
       message(paste0("    Failed with error (", c$error$code, "): ", c$error$message))
-      lon <- NA
-      lat <- NA
+      longitude <- NA
+      latitude <- NA
     }
     # Build columns for bind
-    df <- data.frame(lon, lat)
+    df <- data.frame(longitude, latitude)
     
     # Build Dataframe for results
     if (is.null(final)) {
