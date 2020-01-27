@@ -1,6 +1,6 @@
 # ALCO Geocoder
 
-Geocoder functions using Allgheny County's GIS Esri API for use in Python and R. Note that the address column should be as complete as possible. Geocodes by the highest scored coordinates.
+Geocoder functions using Allgheny County's GIS Esri API for use in Python and R. Note that the address column should be as complete as possible ie: `436 Grant Street, Pittsburgh PA, 15219`. Geocodes addresses by the highest scored coordinates.
 
 _Warning: For geocodes in the tens of thousands users are asked to wait until non-business hours to avoid crashing the server._
 
