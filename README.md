@@ -8,8 +8,7 @@ _Warning: For geocodes in the tens of thousands users are asked to wait until no
 
 R: `source('https://raw.githubusercontent.com/Allegheny-CountyStats/ALCO-Geocoder/master/alco_geocoder.R')`
 
-Python 2: `execfile("https://raw.githubusercontent.com/Allegheny-CountyStats/ALCO-Geocoder/master/County.py") (untested)`
-
+Python 2 (untested): `execfile("https://raw.githubusercontent.com/Allegheny-CountyStats/ALCO-Geocoder/master/County.py")`
 Python 3: `exec(open('https://raw.githubusercontent.com/Allegheny-CountyStats/ALCO-Geocoder/master/County.py').read())`
 
 ### Usage:
