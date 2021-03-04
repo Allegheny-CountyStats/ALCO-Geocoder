@@ -1,8 +1,10 @@
 # ALCO Geocoder
 
-Geocoder functions using Allgheny County's GIS Esri API for use in Python and R. Note that the address column should be as complete as possible ie: `436 Grant Street, Pittsburgh PA, 15219` but should not include Apartment/Unit names/numbers. Geocoded addresses are the highest scored coordinates.
+Geocoder functions using [Allgheny County's GIS Esri API](http://gisdata.alleghenycounty.us/arcgis/rest/services/Geocoders/AddressPoints/GeocodeServer/findAddressCandidates) for use in Python and R. Note that the address column should be as complete as possible ie: `436 Grant Street, Pittsburgh PA, 15219` but should not include Apartment/Unit names/numbers. Geocoded addresses are the highest scored coordinates.
 
 _Warning: For geocodes in the tens of thousands users are asked to wait until non-business hours to avoid crashing the server._
+
+The `usps_geocde.R` functions the same way as the County script, but uses the [United States Postal Service Geocoder](https://gis.usps.com/arcgis/rest/services/locators/US_Street/GeocodeServer/findAddressCandidates).
 
 ### Loading:
 
