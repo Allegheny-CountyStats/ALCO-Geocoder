@@ -23,8 +23,8 @@ countyGeo <- function(locs) {
     # Check status code & number of candidates
     if (r$status_code == 200 & length(jsonlite::fromJSON(httr::content(r))$candidates) > 0) {
       # Successful add top candidate
-      longitude <- c$candidates$location[1,1]
-      latitude <- c$candidates$location[1,2]
+      longitude <- ifelse(c$candidates$location[1,1] == 'NaN', NA, c$candidates$location[1,1])
+      latitude <- ifelse(c$candidates$location[1,2] == 'NaN', NA, c$candidates$location[1,2])
     } else if (r$status_code == 200) {
       # Error if not address candidates
       message("    Failed with error (200): No address candidates")
