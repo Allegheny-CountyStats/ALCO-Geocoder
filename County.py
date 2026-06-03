@@ -9,7 +9,7 @@ import numpy as np
 # Function to Geocode using the Allegheny County Geocoder
 def county_geocode (address):
     # Base URL
-    url = "http://gisdata.alleghenycounty.us/arcgis/rest/services/Geocoders/Composite/GeocodeServer/findAddressCandidates"
+    url = "http://gisdata.alleghenycounty.us/arcgis/rest/services/Geocoders/AddressSearch/GeocodeServer/findAddressCandidates"
     
     # Query string
     query = {"SingleLine": address ,"outSR":"4326","f":"pjson"}
